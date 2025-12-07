@@ -1,0 +1,13 @@
+# editor configs
+.vscode
+
+# datasets
+dataset/
+
+# project outputs
+checkpoints/
+logs/
+results/
+
+# colab notebook
+colab_notebook.ipynb
