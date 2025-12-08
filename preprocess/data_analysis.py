@@ -1,9 +1,11 @@
 
 import os
+# import logging
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import xml.etree.ElementTree as ET
+
 
 from collections import Counter
 from configs.VOC_dataset_configs import ANNOTATION_PATH
@@ -12,11 +14,11 @@ from configs.common_configs import DATA_ANALYSIS_RESULTS_PATH
 
 class DataAnalysis:
     def __init__(self):
+        os.makedirs(DATA_ANALYSIS_RESULTS_PATH, exist_ok=True)
+        self.results_file_path= os.path.join(DATA_ANALYSIS_RESULTS_PATH, 'result.txt')
         self.xml_files = [os.path.join(ANNOTATION_PATH, f) for f in os.listdir(ANNOTATION_PATH) if f.endswith('.xml')]
         
     def class_distribution(self):
-        print("Total number of files:", len(self.xml_files))
-        
         class_counts = Counter()
             
         for xml_file in self.xml_files:
@@ -28,10 +30,23 @@ class DataAnalysis:
                     class_name = obj.find('name').text
                     class_counts[class_name] += 1
 
-        print(f"Total objects found (non-difficult): {sum(class_counts.values())}")
-        print("\n Class distribution:")
-        print(class_counts)
-
+        
+        file = open(self.results_file_path, 'w')
+        try:
+            # file.write(f"Total number of files: {len(self.xml_files)}")
+            # file.write(f"Total objects found (non-difficult): {sum(class_counts.values())}")
+            # file.write("\n Class distribution:")
+            # file.write(class_counts)
+            
+            print(f"Total number of files: {len(self.xml_files)}")
+            print(f"Total objects found (non-difficult): {sum(class_counts.values())}")
+            print("\n Class distribution:")
+            print(class_counts)
+        except Exception as e:
+            print(f"An error occurred: {e}")        
+        finally:
+            file.close()
+            
         class_df = pd.DataFrame(class_counts.most_common(), columns=["Class", "Count"])
 
         plt.figure(figsize=(12, 8))
