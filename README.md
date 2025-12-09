@@ -8,9 +8,7 @@ Before training, the dataset is **carefully analyzed and preprocessed** to ensur
 ## Project Overview
 
 * **Model**: YOLOv3
-* **Dataset**: PASCAL VOC 2007
-Dataset link (Kaggle mirror):
-➡ [https://www.kaggle.com/datasets/stpeteishii/pascal-voc-2007-dataset](https://www.kaggle.com/datasets/stpeteishii/pascal-voc-2007-dataset)
+* **Dataset**: PASCAL VOC 2007 (Dataset link (Kaggle mirror): ➡ [https://www.kaggle.com/datasets/stpeteishii/pascal-voc-2007-dataset](https://www.kaggle.com/datasets/stpeteishii/pascal-voc-2007-dataset))
 * **Task**: Object Detection
 
 The workflow consists of:
