@@ -74,3 +74,12 @@ This ensures compatibility with YOLOv3 and improves training stability.
 * YOLOv3 is trained using the preprocessed VOC 2007 dataset
 * Final dataset structure follows YOLO-style annotations
 * Training focuses on clean, filtered annotations only
+
+---
+
+## Result
+
+<img src="./yolo-object-detection.jpg" alt="Model Result Sample" width="700">
+
+
+
