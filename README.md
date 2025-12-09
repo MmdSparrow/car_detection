@@ -28,7 +28,7 @@ Before training, an exploratory analysis is performed on the VOC 2007 dataset, i
 * Computation and visualization of class frequencies
 * Identification of class imbalance
 
-<img src="./class_distribution_PASCAL_VOC_2007.png" alt="Class Distribution PASCAL VOC 2007" width="400">
+<img src="./class_distribution_PASCAL_VOC_2007.png" alt="Class Distribution PASCAL VOC 2007" width="700">
 
 ### Image Size Statistics
 
