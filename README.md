@@ -9,6 +9,8 @@ Before training, the dataset is **carefully analyzed and preprocessed** to ensur
 
 * **Model**: YOLOv3
 * **Dataset**: PASCAL VOC 2007
+Dataset link (Kaggle mirror):
+➡ [https://www.kaggle.com/datasets/stpeteishii/pascal-voc-2007-dataset](https://www.kaggle.com/datasets/stpeteishii/pascal-voc-2007-dataset)
 * **Task**: Object Detection
 
 The workflow consists of:
@@ -74,5 +76,3 @@ This ensures compatibility with YOLOv3 and improves training stability.
 * YOLOv3 is trained using the preprocessed VOC 2007 dataset
 * Final dataset structure follows YOLO-style annotations
 * Training focuses on clean, filtered annotations only
-
-Just tell me 😄
